@@ -14,6 +14,15 @@ class LeaveRecordObj(graphene.ObjectType):
     def resolve_member(self,info):
         return  User.objects.values().get(id=self['member_id'])
 
+    def resolve_approver(self, info):
+        return User.objects.values().get(id=self['approver_id'])
+
+    def resolve_startDate(self, info):
+        return self['start_date']
+
+    def resolve_endDate(self, info):
+        return self['end_date']
+
 class getLeaveRecordsObj(graphene.ObjectType):
     leaveRecords = graphene.List(LeaveRecordObj)
     
