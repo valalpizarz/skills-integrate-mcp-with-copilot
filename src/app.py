@@ -77,6 +77,13 @@ activities = {
     }
 }
 
+# Added GitHub Skills activity (issue #6)
+activities["GitHub Skills"] = {
+    "description": "Hands-on GitHub collaboration and practical coding workshops (certification prep)",
+    "schedule": "TBD — sessions announced by instructors",
+    "max_participants": 25,
+    "participants": []
+}
 
 @app.get("/")
 def root():
