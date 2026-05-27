@@ -156,7 +156,7 @@ class ProfileObj(graphene.ObjectType):
     @login_required
     def resolve_inCMSGroup(self, info):
         if info.context.user.is_superuser:
-            return Group.objects.values().filter(members__id=self['user_id'])
+            return Group.objects.filter(members__id=self['user_id']).exists()
         else:
             raise APIException('Only Superusers have access',
                                code='ONLY_SUPERUSER_HAS_ACCESS')
