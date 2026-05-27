@@ -16,7 +16,7 @@ class WebSpaceObj(graphene.ObjectType):
         return self['date']
 
     def resolve_user(self, info):
-        return User.objects.values().get(id=self['member_id'])
+        return User.objects.values().get(id=self['user_id'])
 
 class Query(object):
     file = graphene.Field(
