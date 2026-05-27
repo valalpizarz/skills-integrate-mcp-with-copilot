@@ -189,7 +189,7 @@ class GroupAdmin(ImportExportModelAdmin, ExportActionMixin, admin.ModelAdmin):
     def members_count(self, obj):
         return obj.members.all().count()
 
-    members_count.verbose_name = 'No. of Mentees'
+    members_count.verbose_name = 'No. of Members'
 
 
 class MentorGroupResource(resources.ModelResource):
