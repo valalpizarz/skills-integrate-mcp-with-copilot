@@ -7,7 +7,7 @@ from attendance.models import Module
 
 import uuid
 from datetime import date
-from framework.validators import validate_file_size, processed_image_field_specs
+from members.validators import validate_file_size, processed_image_field_specs
 from imagekit.models import ProcessedImageField
 from django.utils import timezone
 
